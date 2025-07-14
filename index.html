@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NALEDI FILM FESTIVAL</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .page {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #FFD700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .date-location {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #FFD700;
+            border: 2px solid #FFD700;
+        }
+
+        .btn-outline:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #FFD700;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+        }
+
+        .nav-dots {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #FFD700;
+            transform: scale(1.3);
+        }
+
+        .programme-day {
+            margin-bottom: 40px;
+        }
+
+        .programme-item {
+            background-color: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #FFD700;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .programme-time {
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 5px;
+        }
+
+        .programme-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .programme-venue {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .programme-director,
+        .programme-guests {
+            font-size: 0.9rem;
+            color: #FFD700;
+            margin-top: 5px;
+        }
+
+        .submission-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 2px solid #FFD700;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .submission-link:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .date-location {
+                font-size: 1.3rem;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Dots -->
+<div class="nav-dots">
+    <div class="dot active" data-page="0"></div>
+    <div class="dot" data-page="1"></div>
+    <div class="dot" data-page="2"></div>
+</div>
+
+<!-- Page 1: Hero Section -->
+<div class="page" id="page1">
+    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Film Festival Background" class="bg-image">
+    <div class="logo">Naledi Film Festival</div>
+    <div class="date-location">08-09 August 2025<br>VRYBURG, North West Province</div>
+    <div class="btn-container">
+        <button class="btn" onclick="window.open('https://docs.google.com/forms/d/1gAvn7bqWXpxw6kKZiqJaRpp2T7N5IAsMg7id_aapWJw/viewform?edit_requested=true', '_blank')">Submit Film</button>
+        <button class="btn btn-outline" onclick="scrollToPage(1)">Learn More</button>
+    </div>
+</div>
+
+<!-- Page 2: About Section -->
+<div class="page" id="page2">
+    <div class="content">
+        <h2>About The Festival</h2>
+        <p>A new star is rising in South Africa's creative landscape! The inaugural <span class="highlight">Naledi Film Festival</span> will light up Vryburg from 8–9 August 2025, offering a powerful platform for young voices, bold stories, and authentic African narratives.</p>
+
+        <p>Organized by <span class="highlight">Rapits! Development Projects</span> in partnership with <span class="highlight">Monate Africa</span> and the <span class="highlight">National Film and Video Foundation (NFVF)</span>, this youth-driven initiative is designed to empower aspiring filmmakers aged 16–35 from the Northwest Province with extended invitation to young filmmakers in Northern Cape and Free State provinces.</p>
+
+        <p>"Naledi" means star – a fitting name for a festival that aims to spotlight the next generation of creatives in Northwest Province. The festival serves not just as a celebration, but as an incubator for future talent, particularly in underserved and rural communities often left out of mainstream creative industry opportunities.</p>
+
+        <p><span class="highlight">Admission to all festival events is FREE</span>, with masterclass slots available on a first come, first served basis. The festival encourages participation from young people passionate about acting, filmmaking, storytelling, and cultural expression.</p>
+
+        <div class="btn-container">
+            <button class="btn" onclick="scrollToPage(2)">View Programme</button>
+            <button class="btn btn-outline" onclick="scrollToPage(0)">Back Home</button>
+        </div>
+    </div>
+</div>
+
+<!-- Page 3: Programme Section -->
+<div class="page" id="page3">
+    <div class="content">
+        <h2>Festival Programme</h2>
+
+        <div class="programme-day">
+            <h3>August 8, 2025 - Day 1</h3>
+
+            <div class="programme-item">
+                <div class="programme-time">09:00 - 12:00</div>
+                <div class="programme-title">School Tour</div>
+                <div class="programme-venue">Venue: TBC</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">14:00 - 16:00</div>
+                <div class="programme-title">Promotional Meet & Greet</div>
+                <div class="programme-venue">Venue: Ruth Mompati Mall</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">17:00 - 18:30</div>
+                <div class="programme-title">Pre-Screening Entertainment: DJ Set</div>
+                <div class="programme-venue">Venue: TBC</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">18:30 - 19:30</div>
+                <div class="programme-title">Outdoor Screening: Kalushi: The Story of Solomon Mahlangu (1h47)</div>
+                <div class="programme-venue">Venue: TBC</div>
+                <div class="programme-director">Director: Mandla Dube</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">19:30 - 21:00</div>
+                <div class="programme-title">Post-Screening Entertainment: DJ Set</div>
+                <div class="programme-venue">Venue: TBC</div>
+            </div>
+        </div>
+
+        <div class="programme-day">
+            <h3>August 9, 2025 - Day 2</h3>
+
+            <div class="programme-item">
+                <div class="programme-time">09:00 - 10:00</div>
+                <div class="programme-title">Arrival & Registration</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">10:00 - 13:00</div>
+                <div class="programme-title">Filmmaking Masterclass & Acting for Film Masterclass</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">14:00 - 15:00</div>
+                <div class="programme-title">Screenings</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">15:00 - 16:00</div>
+                <div class="programme-title">Panel Discussion: Starting Out in Film Industry & Careers/Business Opportunities</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+                <div class="programme-guests">Guests: Kutloano Lubecko (Costume Designer & Stylist), Kagiso Moreki (Producer), Ayanda Daweti (Actor)</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">18:00 - 19:00</div>
+                <div class="programme-title">Arrival & Registration & Red Carpet</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">19:00 - 20:00</div>
+                <div class="programme-title">Closing Screening</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">20:00 - 20:15</div>
+                <div class="programme-title">Message of Support: Naledi Municipality</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">20:15 - 20:30</div>
+                <div class="programme-title">Closing Remarks: Festival Director & Team</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">20:30 - 21:30</div>
+                <div class="programme-title">Live Band</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+
+            <div class="programme-item">
+                <div class="programme-time">21:30 - 22:30</div>
+                <div class="programme-title">DJ Set</div>
+                <div class="programme-venue">Venue: Vryburg Theatre</div>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button class="btn" onclick="window.open('https://docs.google.com/forms/d/1gAvn7bqWXpxw6kKZiqJaRpp2T7N5IAsMg7id_aapWJw/viewform?edit_requested=true', '_blank')">Submit Your Film</button>
+            <button class="btn btn-outline" onclick="scrollToPage(1)">About Festival</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript for smooth scrolling and navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const pages = document.querySelectorAll('.page');
+        const dots = document.querySelectorAll('.dot');
+        let currentPage = 0;
+        let isScrolling = false;
+
+        // Initialize scroll snapping
+        window.addEventListener('wheel', handleScroll, { passive: false });
+        window.addEventListener('touchmove', handleScroll, { passive: false });
+
+        // Dot navigation click events
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const pageIndex = parseInt(this.getAttribute('data-page'));
+                scrollToPage(pageIndex);
+            });
+        });
+
+        function handleScroll(e) {
+            if (isScrolling) return;
+
+            e.preventDefault();
+
+            // Determine scroll direction
+            let delta;
+            if (e.type === 'wheel') {
+                delta = e.deltaY > 0 ? 1 : -1;
+            } else if (e.type === 'touchmove') {
+                delta = e.touches[0].clientY < startY ? 1 : -1;
+            }
+
+            const newPage = currentPage + delta;
+
+            // Boundary checks
+            if (newPage >= 0 && newPage < pages.length) {
+                scrollToPage(newPage);
+            }
+        }
+
+        function scrollToPage(pageIndex) {
+            isScrolling = true;
+            currentPage = pageIndex;
+
+            // Scroll to the page
+            pages[pageIndex].scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            // Update active dot
+            dots.forEach((dot, index) => {
+                if (index === pageIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            // Reset scrolling flag after animation completes
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000);
+        }
+
+        // Touch events for mobile
+        let startY;
+        document.addEventListener('touchstart', function(e) {
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+    });
+
+    // Make scrollToPage available globally for button clicks
+    window.scrollToPage = function(pageIndex) {
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+        let isScrolling = false;
+
+        if (pageIndex >= pages.length) return;
+
+        isScrolling = true;
+        currentPage = pageIndex;
+
+        pages[pageIndex].scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            if (index === pageIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, 1000);
+    };
+</script>
+</body>
+</html>
