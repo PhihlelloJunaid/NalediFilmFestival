@@ -1,0 +1,137 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:South Africa Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0200
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+ATTENDEE;CN=phihle15.com@gmail.com;RSVP=TRUE:mailto:phihle15.com@gmail.com
+ATTENDEE;CN=phihlello.junaid@icloud.com;RSVP=TRUE:mailto:phihlello.junaid@i
+	cloud.com
+ATTENDEE;CN="Tasneem Cassiem";RSVP=TRUE:mailto:tasneemcassiem@fsperformance
+	consulting.co.za
+CLASS:PUBLIC
+CREATED:20250716T152638Z
+DESCRIPTION: \n\n__________________________________________________________
+	______________________\n\nMicrosoft Teams Need help? <https://aka.ms/JoinT
+	eamsMeeting?omkt=en-US>  \n\nJoin the meeting now <https://teams.microsoft
+	.com/l/meetup-join/19%3ameeting_YjhhM2U0MzAtNWQyMy00N2M5LThlNTYtZDllMDU0Nz
+	g2YmQ0%40thread.v2/0?context=%7b%22Tid%22%3a%2292f990b4-87ef-40f4-b7f9-bdd
+	10a57632e%22%2c%22Oid%22%3a%22169f3bd9-37bd-4203-b956-aaf7542612ef%22%7d> 
+	 \n\nMeeting ID: 332 869 386 849 1 \n\nPasscode: gh3Py9p9 \n\n____________
+	____________________\n\nFor organizers: Meeting options <https://teams.mic
+	rosoft.com/meetingOptions/?organizerId=169f3bd9-37bd-4203-b956-aaf7542612e
+	f&tenantId=92f990b4-87ef-40f4-b7f9-bdd10a57632e&threadId=19_meeting_YjhhM2
+	U0MzAtNWQyMy00N2M5LThlNTYtZDllMDU0Nzg2YmQ0@thread.v2&messageId=0&language=
+	en-US>  \n\n______________________________________________________________
+	__________________\n\n \n\n
+DTEND;TZID="South Africa Standard Time":20250717T103000
+DTSTAMP:20250716T152638Z
+DTSTART;TZID="South Africa Standard Time":20250717T100000
+LAST-MODIFIED:20250716T152638Z
+LOCATION:Microsoft Teams Meeting
+ORGANIZER;CN=recruitment@fsperformanceconsulting.co.za:mailto:recruitment@f
+	sperformanceconsulting.co.za
+PRIORITY:5
+SEQUENCE:1
+SUMMARY;LANGUAGE=en-za:FSPC Recruitment Interview: IT Systems Monitoring Op
+	erator - Phihlello Junaid Maroga
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E008000000006089229B75F6DB01000000000000000
+	01000000028A3D2AC238C3D48A791817EBC6A1098
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+	12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv=Co
+	ntent-Type content="text/html\; charset=us-ascii"><meta name=Generator con
+	tent="Microsoft Word 15 (filtered medium)"><!--[if !mso]><style>v\\:* {beh
+	avior:url(#default#VML)\;}\no\\:* {behavior:url(#default#VML)\;}\nw\\:* {b
+	ehavior:url(#default#VML)\;}\n.shape {behavior:url(#default#VML)\;}\n</sty
+	le><![endif]--><style><!--\n/* Font Definitions */\n@font-face\n	{font-fam
+	ily:"Cambria Math"\;\n	panose-1:2 4 5 3 5 4 6 3 2 4\;}\n@font-face\n	{font
+	-family:Calibri\;\n	panose-1:2 15 5 2 2 2 4 3 2 4\;}\n@font-face\n	{font-f
+	amily:Aptos\;}\n@font-face\n	{font-family:"Segoe UI"\;\n	panose-1:2 11 5 2
+	 4 2 4 2 2 3\;}\n/* Style Definitions */\np.MsoNormal\, li.MsoNormal\, div
+	.MsoNormal\n	{margin:0cm\;\n	font-size:11.0pt\;\n	font-family:"Aptos"\,san
+	s-serif\;\n	mso-ligatures:standardcontextual\;\n	mso-fareast-language:EN-U
+	S\;}\na:link\, span.MsoHyperlink\n	{mso-style-priority:99\;\n	color:#46788
+	6\;\n	text-decoration:underline\;}\nspan.me-email-text\n	{mso-style-name:m
+	e-email-text\;}\nspan.me-email-text-secondary\n	{mso-style-name:me-email-t
+	ext-secondary\;}\nspan.EmailStyle20\n	{mso-style-type:personal-compose\;\n
+		font-family:"Calibri"\,sans-serif\;}\n.MsoChpDefault\n	{mso-style-type:ex
+	port-only\;\n	font-size:10.0pt\;\n	mso-ligatures:none\;}\n@page WordSectio
+	n1\n	{size:612.0pt 792.0pt\;\n	margin:72.0pt 72.0pt 72.0pt 72.0pt\;}\ndiv.
+	WordSection1\n	{page:WordSection1\;}\n--></style><!--[if gte mso 9]><xml>\
+	n<o:shapedefaults v:ext="edit" spidmax="1026" />\n</xml><![endif]--><!--[i
+	f gte mso 9]><xml>\n<o:shapelayout v:ext="edit">\n<o:idmap v:ext="edit" da
+	ta="1" />\n</o:shapelayout></xml><![endif]--></head><body lang=EN-ZA link=
+	"#467886" vlink="#96607D" style='word-wrap:break-word'><div class=WordSect
+	ion1><p class=MsoNormal><span style='font-family:"Calibri"\,sans-serif'><o
+	:p>&nbsp\;</o:p></span></p><div><div style='margin-bottom:18.0pt\;overflow
+	:hidden'><p class=MsoNormal><span style='font-family:"Segoe UI"\,sans-seri
+	f\;color:#242424'>________________________________________________________
+	________________________</span><span style='font-size:12.0pt\;font-family:
+	"Segoe UI"\,sans-serif\;color:#242424\;mso-ligatures:none'><o:p></o:p></sp
+	an></p></div><div style='margin-bottom:9.0pt'><p class=MsoNormal><span cla
+	ss=me-email-text><b><span style='font-size:18.0pt\;font-family:"Segoe UI"\
+	,sans-serif\;color:#242424'>Microsoft Teams</span></b></span><span style='
+	font-family:"Segoe UI"\,sans-serif\;color:#242424'> <a href="https://aka.m
+	s/JoinTeamsMeeting?omkt=en-US"><span style='font-size:10.5pt\;color:#5B5FC
+	7'>Need help?</span></a> <o:p></o:p></span></p></div><div style='margin-bo
+	ttom:4.5pt'><p class=MsoNormal><span style='font-family:"Segoe UI"\,sans-s
+	erif\;color:#242424'><a href="https://teams.microsoft.com/l/meetup-join/19
+	%3ameeting_YjhhM2U0MzAtNWQyMy00N2M5LThlNTYtZDllMDU0Nzg2YmQ0%40thread.v2/0?
+	context=%7b%22Tid%22%3a%2292f990b4-87ef-40f4-b7f9-bdd10a57632e%22%2c%22Oid
+	%22%3a%22169f3bd9-37bd-4203-b956-aaf7542612ef%22%7d" target="_blank" title
+	="Meeting join link"><b><span style='font-size:15.0pt\;color:#5B5FC7'>Join
+	 the meeting now</span></b></a> <o:p></o:p></span></p></div><div style='ma
+	rgin-bottom:4.5pt'><p class=MsoNormal><span class=me-email-text-secondary>
+	<span style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#
+	616161'>Meeting ID: </span></span><span class=me-email-text><span style='f
+	ont-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#242424'>332 86
+	9 386 849 1</span></span><span style='font-family:"Segoe UI"\,sans-serif\;
+	color:#242424'> <o:p></o:p></span></p></div><div style='margin-bottom:18.0
+	pt'><p class=MsoNormal><span class=me-email-text-secondary><span style='fo
+	nt-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#616161'>Passcod
+	e: </span></span><span class=me-email-text><span style='font-size:10.5pt\;
+	font-family:"Segoe UI"\,sans-serif\;color:#242424'>gh3Py9p9</span></span><
+	span style='font-family:"Segoe UI"\,sans-serif\;color:#242424'> <o:p></o:p
+	></span></p></div><div style='margin-bottom:18.0pt'><div class=MsoNormal a
+	lign=center style='text-align:center'><span style='font-family:"Segoe UI"\
+	,sans-serif\;color:#242424'><hr size=1 width="100%" align=center></span></
+	div></div><div><p class=MsoNormal><span class=me-email-text-secondary><spa
+	n style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#6161
+	61'>For organizers: </span></span><span style='font-family:"Segoe UI"\,san
+	s-serif\;color:#242424'><a href="https://teams.microsoft.com/meetingOption
+	s/?organizerId=169f3bd9-37bd-4203-b956-aaf7542612ef&amp\;tenantId=92f990b4
+	-87ef-40f4-b7f9-bdd10a57632e&amp\;threadId=19_meeting_YjhhM2U0MzAtNWQyMy00
+	N2M5LThlNTYtZDllMDU0Nzg2YmQ0@thread.v2&amp\;messageId=0&amp\;language=en-U
+	S" target="_blank"><span style='font-size:10.5pt\;color:#5B5FC7'>Meeting o
+	ptions</span></a> <o:p></o:p></span></p></div><div style='margin-bottom:18
+	.0pt\;overflow:hidden'><p class=MsoNormal><span style='font-family:"Segoe 
+	UI"\,sans-serif\;color:#242424'>__________________________________________
+	______________________________________<o:p></o:p></span></p></div></div><p
+	 class=MsoNormal><span style='font-family:"Calibri"\,sans-serif'><o:p>&nbs
+	p\;</o:p></span></p></div></body></html>
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-APPTSEQTIME:20250716T152505Z
+X-MS-OLK-AUTOSTARTCHECK:FALSE
+X-MS-OLK-CONFTYPE:0
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
+
