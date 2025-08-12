@@ -22,14 +22,23 @@
 
         .page {
             width: 100vw;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             position: relative;
             overflow: hidden;
+        }
+
+        /* Page 1 specific styles */
+        #page1 {
+            justify-content: center;
+            align-items: center;
             padding: 20px;
+        }
+
+        /* Pages 2 and 3 specific styles */
+        #page2, #page3 {
+            overflow-y: auto;
         }
 
         .logo-container {
@@ -117,10 +126,14 @@
         .content {
             width: 100%;
             max-width: 800px;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
             margin: 0 auto;
-            overflow-y: auto;
+        }
+
+        .scrollable-content {
+            width: 100%;
+            padding: 40px 20px;
         }
 
         h2 {
@@ -237,7 +250,7 @@
 
         /* Mobile-specific adjustments */
         @media (max-width: 600px) {
-            .page {
+            #page1 {
                 padding: 20px 10px;
                 justify-content: flex-start;
                 padding-top: 60px;
@@ -259,7 +272,7 @@
                 max-width: 250px;
             }
 
-            .content {
+            .content, .scrollable-content {
                 padding: 20px 10px;
             }
 
@@ -314,131 +327,135 @@
 
 <!-- Page 2: About Section -->
 <div class="page" id="page2">
-    <div class="content">
-        <h2>About The Festival</h2>
-        <p>A new star is rising in South Africa's creative landscape! The inaugural <span class="highlight">Naledi Film Festival</span> will light up Vryburg from 8–9 August 2025, offering a powerful platform for young voices, bold stories, and authentic African narratives.</p>
+    <div class="scrollable-content">
+        <div class="content">
+            <h2>About The Festival</h2>
+            <p>A new star is rising in South Africa's creative landscape! The inaugural <span class="highlight">Naledi Film Festival</span> will light up Vryburg from 8–9 August 2025, offering a powerful platform for young voices, bold stories, and authentic African narratives.</p>
 
-        <p>Organized by <span class="highlight">Rapitsi Development Projects</span> in partnership with <span class="highlight">Monate Africa</span> and the <span class="highlight">National Film and Video Foundation (NFVF)</span>, this youth-driven initiative is designed to empower aspiring filmmakers aged 16–35 from the Northwest Province with extended invitation to young filmmakers in Northern Cape and Free State provinces.</p>
+            <p>Organized by <span class="highlight">Rapitsi Development Projects</span> in partnership with <span class="highlight">Monate Africa</span> and the <span class="highlight">National Film and Video Foundation (NFVF)</span>, this youth-driven initiative is designed to empower aspiring filmmakers aged 16–35 from the Northwest Province with extended invitation to young filmmakers in Northern Cape and Free State provinces.</p>
 
-        <p>"Naledi" means star – a fitting name for a festival that aims to spotlight the next generation of creatives in Northwest Province. The festival serves not just as a celebration, but as an incubator for future talent, particularly in underserved and rural communities often left out of mainstream creative industry opportunities.</p>
+            <p>"Naledi" means star – a fitting name for a festival that aims to spotlight the next generation of creatives in Northwest Province. The festival serves not just as a celebration, but as an incubator for future talent, particularly in underserved and rural communities often left out of mainstream creative industry opportunities.</p>
 
-        <p><span class="highlight">Admission to all festival events is FREE</span>, with masterclass slots available on a first come, first served basis. The festival encourages participation from young people passionate about acting, filmmaking, storytelling, and cultural expression.</p>
+            <p><span class="highlight">Admission to all festival events is FREE</span>, with masterclass slots available on a first come, first served basis. The festival encourages participation from young people passionate about acting, filmmaking, storytelling, and cultural expression.</p>
 
-        <div class="btn-container">
-            <button class="btn" onclick="scrollToPage(2)">View Programme</button>
-            <button class="btn btn-outline" onclick="scrollToPage(0)">Back Home</button>
+            <div class="btn-container">
+                <button class="btn" onclick="scrollToPage(2)">View Programme</button>
+                <button class="btn btn-outline" onclick="scrollToPage(0)">Back Home</button>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Page 3: Programme Section -->
 <div class="page" id="page3">
-    <div class="content">
-        <h2>Festival Programme</h2>
+    <div class="scrollable-content">
+        <div class="content">
+            <h2>Festival Programme</h2>
 
-        <div class="programme-day">
-            <h3>August 8, 2025 - Day 1</h3>
+            <div class="programme-day">
+                <h3>August 8, 2025 - Day 1</h3>
 
-            <div class="programme-item">
-                <div class="programme-time">09:00 - 12:00</div>
-                <div class="programme-title">School Tour</div>
-                <div class="programme-venue">Venue: TBC</div>
+                <div class="programme-item">
+                    <div class="programme-time">09:00 - 12:00</div>
+                    <div class="programme-title">School Tour</div>
+                    <div class="programme-venue">Venue: TBC</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">14:00 - 16:00</div>
+                    <div class="programme-title">Promotional Meet & Greet</div>
+                    <div class="programme-venue">Venue: Ruth Mompati Mall</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">17:00 - 18:30</div>
+                    <div class="programme-title">Pre-Screening Entertainment: DJ Set</div>
+                    <div class="programme-venue">Venue: TBC</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">18:30 - 19:30</div>
+                    <div class="programme-title">Outdoor Screening: Kalushi: The Story of Solomon Mahlangu (1h47)</div>
+                    <div class="programme-venue">Venue: TBC</div>
+                    <div class="programme-director">Director: Mandla Dube</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">19:30 - 21:00</div>
+                    <div class="programme-title">Post-Screening Entertainment: DJ Set</div>
+                    <div class="programme-venue">Venue: TBC</div>
+                </div>
             </div>
 
-            <div class="programme-item">
-                <div class="programme-time">14:00 - 16:00</div>
-                <div class="programme-title">Promotional Meet & Greet</div>
-                <div class="programme-venue">Venue: Ruth Mompati Mall</div>
+            <div class="programme-day">
+                <h3>August 9, 2025 - Day 2</h3>
+
+                <div class="programme-item">
+                    <div class="programme-time">09:00 - 10:00</div>
+                    <div class="programme-title">Arrival & Registration</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">10:00 - 13:00</div>
+                    <div class="programme-title">Filmmaking Masterclass & Acting for Film Masterclass</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">14:00 - 15:00</div>
+                    <div class="programme-title">Screenings</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">15:00 - 16:00</div>
+                    <div class="programme-title">Panel Discussion: Starting Out in Film Industry & Careers/Business Opportunities</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                    <div class="programme-guests">Guests: Kutloano Lubecko (Costume Designer & Stylist), Kagiso Moreki (Producer), Ayanda Daweti (Actor)</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">18:00 - 19:00</div>
+                    <div class="programme-title">Arrival & Registration & Red Carpet</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">19:00 - 20:00</div>
+                    <div class="programme-title">Closing Screening</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">20:00 - 20:15</div>
+                    <div class="programme-title">Message of Support: Naledi Municipality</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">20:15 - 20:30</div>
+                    <div class="programme-title">Closing Remarks: Festival Director & Team</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">20:30 - 21:30</div>
+                    <div class="programme-title">Live Band</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
+
+                <div class="programme-item">
+                    <div class="programme-time">21:30 - 22:30</div>
+                    <div class="programme-title">DJ Set</div>
+                    <div class="programme-venue">Venue: Vryburg Theatre</div>
+                </div>
             </div>
 
-            <div class="programme-item">
-                <div class="programme-time">17:00 - 18:30</div>
-                <div class="programme-title">Pre-Screening Entertainment: DJ Set</div>
-                <div class="programme-venue">Venue: TBC</div>
+            <div class="btn-container">
+                <button class="btn" onclick="window.open('https://docs.google.com/forms/d/1gAvn7bqWXpxw6kKZiqJaRpp2T7N5IAsMg7id_aapWJw/viewform?edit_requested=true', '_blank')">Submit Your Film</button>
+                <button class="btn btn-outline" onclick="scrollToPage(1)">About Festival</button>
             </div>
-
-            <div class="programme-item">
-                <div class="programme-time">18:30 - 19:30</div>
-                <div class="programme-title">Outdoor Screening: Kalushi: The Story of Solomon Mahlangu (1h47)</div>
-                <div class="programme-venue">Venue: TBC</div>
-                <div class="programme-director">Director: Mandla Dube</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">19:30 - 21:00</div>
-                <div class="programme-title">Post-Screening Entertainment: DJ Set</div>
-                <div class="programme-venue">Venue: TBC</div>
-            </div>
-        </div>
-
-        <div class="programme-day">
-            <h3>August 9, 2025 - Day 2</h3>
-
-            <div class="programme-item">
-                <div class="programme-time">09:00 - 10:00</div>
-                <div class="programme-title">Arrival & Registration</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">10:00 - 13:00</div>
-                <div class="programme-title">Filmmaking Masterclass & Acting for Film Masterclass</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">14:00 - 15:00</div>
-                <div class="programme-title">Screenings</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">15:00 - 16:00</div>
-                <div class="programme-title">Panel Discussion: Starting Out in Film Industry & Careers/Business Opportunities</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-                <div class="programme-guests">Guests: Kutloano Lubecko (Costume Designer & Stylist), Kagiso Moreki (Producer), Ayanda Daweti (Actor)</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">18:00 - 19:00</div>
-                <div class="programme-title">Arrival & Registration & Red Carpet</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">19:00 - 20:00</div>
-                <div class="programme-title">Closing Screening</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">20:00 - 20:15</div>
-                <div class="programme-title">Message of Support: Naledi Municipality</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">20:15 - 20:30</div>
-                <div class="programme-title">Closing Remarks: Festival Director & Team</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">20:30 - 21:30</div>
-                <div class="programme-title">Live Band</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-
-            <div class="programme-item">
-                <div class="programme-time">21:30 - 22:30</div>
-                <div class="programme-title">DJ Set</div>
-                <div class="programme-venue">Venue: Vryburg Theatre</div>
-            </div>
-        </div>
-
-        <div class="btn-container">
-            <button class="btn" onclick="window.open('https://docs.google.com/forms/d/1gAvn7bqWXpxw6kKZiqJaRpp2T7N5IAsMg7id_aapWJw/viewform?edit_requested=true', '_blank')">Submit Your Film</button>
-            <button class="btn btn-outline" onclick="scrollToPage(1)">About Festival</button>
         </div>
     </div>
 </div>
@@ -451,9 +468,10 @@
         let currentPage = 0;
         let isScrolling = false;
         let startY;
+        let touchStartY;
 
-        // Initialize scroll snapping
-        window.addEventListener('wheel', handleScroll, { passive: false });
+        // Initialize scroll snapping for full page scroll
+        window.addEventListener('wheel', handleWheelScroll, { passive: false });
         window.addEventListener('touchstart', handleTouchStart, { passive: true });
         window.addEventListener('touchmove', handleTouchMove, { passive: false });
 
@@ -465,26 +483,80 @@
             });
         });
 
-        function handleScroll(e) {
-            if (isScrolling) return;
+        // Handle scroll events for Pages 2 and 3
+        const scrollablePages = [document.getElementById('page2'), document.getElementById('page3')];
+
+        scrollablePages.forEach(page => {
+            page.addEventListener('wheel', handleInnerScroll);
+            page.addEventListener('touchmove', handleInnerTouch, { passive: false });
+        });
+
+        function handleWheelScroll(e) {
+            if (isScrolling || currentPage === 1 || currentPage === 2) return;
             e.preventDefault();
 
-            // Determine scroll direction
             const delta = e.deltaY > 0 ? 1 : -1;
             navigateToPage(delta);
         }
 
+        function handleInnerScroll(e) {
+            const element = e.currentTarget;
+            const isAtTop = element.scrollTop === 0;
+            const isAtBottom = element.scrollHeight - element.scrollTop === element.clientHeight;
+
+            // If at top and scrolling up, or at bottom and scrolling down, allow page change
+            if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+                e.preventDefault();
+                const delta = e.deltaY > 0 ? 1 : -1;
+                navigateToPage(delta);
+            }
+            // Otherwise, let the inner content scroll
+        }
+
         function handleTouchStart(e) {
-            startY = e.touches[0].clientY;
+            touchStartY = e.touches[0].clientY;
         }
 
         function handleTouchMove(e) {
             if (isScrolling) return;
-            e.preventDefault();
 
-            const y = e.touches[0].clientY;
-            const delta = y < startY ? 1 : -1;
-            navigateToPage(delta);
+            const touchY = e.touches[0].clientY;
+            const deltaY = touchY - touchStartY;
+
+            // For Pages 2 and 3, check if we're at top/bottom
+            if (currentPage === 1 || currentPage === 2) {
+                const element = e.currentTarget;
+                const isAtTop = element.scrollTop === 0;
+                const isAtBottom = element.scrollHeight - element.scrollTop <= element.clientHeight + 1;
+
+                // If at top and pulling down, or at bottom and pulling up, allow page change
+                if ((isAtTop && deltaY > 0) || (isAtBottom && deltaY < 0)) {
+                    e.preventDefault();
+                    const delta = deltaY > 0 ? -1 : 1;
+                    navigateToPage(delta);
+                }
+                // Otherwise, let the inner content scroll
+            } else {
+                // For Page 1, handle normal touch scroll
+                e.preventDefault();
+                const delta = touchY < touchStartY ? 1 : -1;
+                navigateToPage(delta);
+            }
+        }
+
+        function handleInnerTouch(e) {
+            const touchY = e.touches[0].clientY;
+            const deltaY = touchY - touchStartY;
+            const element = e.currentTarget;
+            const isAtTop = element.scrollTop === 0;
+            const isAtBottom = element.scrollHeight - element.scrollTop <= element.clientHeight + 1;
+
+            if ((isAtTop && deltaY > 5) || (isAtBottom && deltaY < -5)) {
+                e.preventDefault();
+                const delta = deltaY > 0 ? -1 : 1;
+                navigateToPage(delta);
+            }
+            // Otherwise, let the inner content scroll
         }
 
         function navigateToPage(delta) {
@@ -495,6 +567,9 @@
         }
 
         function scrollToPage(pageIndex) {
+            // Don't scroll if we're already on this page
+            if (pageIndex === currentPage) return;
+
             isScrolling = true;
             currentPage = pageIndex;
 
